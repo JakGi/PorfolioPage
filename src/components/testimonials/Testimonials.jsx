@@ -3,29 +3,13 @@ import "./testimonials.scss";
 export default function Testimonials() {
   const data = [
     {
-      id: 1,
-      name: "InfoShare Academy",
-      img: "assets/infoshare.png",
-      desc: "Szkolenie obejmowało 324 godzin warszatowych w trypie dziennym.Dostarczyło ono wiedzy i praktycznych umiejetności z zakresu : HTML, CSS , SCSS, JS, React, Redux, Firebase, TypeSctipt, Gti, HTTP, Scrum, NodeJS, Webpack, ESlint, Babel, Prettier, Husky.",
-      link: <a href="http://infoshareacademy.com" alt="infoshare" target="_blank" rel="noreferrer">InfoShareAcademy</a>,
-      featured: false,
-    },
-    {
         id: 2,
         name: "InfoShare Academy",
         img: "assets/infoshare.png",
         desc: "Szkolenie obejmowało 324 godzin warszatowych w trypie dziennym.Dostarczyło ono wiedzy i praktycznych umiejetności z zakresu : HTML, CSS , SCSS, JS, React, Redux, Firebase, TypeSctipt, Gti, HTTP, Scrum, NodeJS, Webpack, ESlint, Babel, Prettier, Husky.",
         link: <a href="http://infoshareacademy.com" alt="infoshare" target="_blank" rel="noreferrer">InfoShareAcademy</a>,
-        featured: true,
-      },
-      {
-        id: 3,
-        name: "InfoShare Academy",
-        img: "assets/infoshare.png",
-        desc: "Szkolenie obejmowało 324 godzin warszatowych w trypie dziennym.Dostarczyło ono wiedzy i praktycznych umiejetności z zakresu : HTML, CSS , SCSS, JS, React, Redux, Firebase, TypeSctipt, Gti, HTTP, Scrum, NodeJS, Webpack, ESlint, Babel, Prettier, Husky.",
-        link: <a href="http://infoshareacademy.com" alt="infoshare" target="_blank" rel="noreferrer">InfoShareAcademy</a>,
         featured: false,
-      }
+      },
   ];
 
   return (
