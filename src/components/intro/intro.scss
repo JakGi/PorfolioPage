@@ -6,7 +6,7 @@
     flex: 0.5;
     overflow: hidden;
     .imgContainer {
-      width: 1300px;
+      width: 1350px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -38,6 +38,21 @@
         }
         h3{
             font-size: 30px;
+        }
+        span{
+          color: crimson;
+        }
+
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+        @keyframes blink {
+          50%{
+            opacity: 1;
+          }
+          100%{
+            opacity: 0;
+          }
         }
     }
     a{
