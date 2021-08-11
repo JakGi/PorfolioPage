@@ -5,7 +5,7 @@ export default function Testimonials() {
     {
         id: 2,
         name: "InfoShare Academy",
-        img: "PorfolioPage/assets/infoshare.png",
+        img: "/PorfolioPage/assets/infoshare.png",
         desc: "Szkolenie obejmowało 324 godzin warszatowych w trypie dziennym.Dostarczyło ono wiedzy i praktycznych umiejetności z zakresu : HTML, CSS , SCSS, JS, React, Redux, Firebase, TypeSctipt, Gti, HTTP, Scrum, NodeJS, Webpack, ESlint, Babel, Prettier, Husky.",
         link: <a href="http://infoshareacademy.com" alt="infoshare" target="_blank" rel="noreferrer">InfoShareAcademy</a>,
         featured: false,
