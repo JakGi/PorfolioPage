@@ -1,14 +1,25 @@
 import { useState } from "react";
+import emailjs from 'emailjs-com';
 
 import "./contact.scss";
 
 export default function Contact() {
   const [message, setMessage] = useState(false);
 
-  const handleSubmit = (e) => {
+
+
+  function sendEmail(e) {
     e.preventDefault();
-    setMessage(true);
-  };
+
+    emailjs.sendForm("service_ttaudwr","template_52c09ff", e.target, 'user_BhX207N6r6qiRvXJq4Sxq')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      setMessage(true);
+      e.target.reset()
+  }
 
   return (
     <div className="contact" id="contact">
@@ -17,9 +28,9 @@ export default function Contact() {
       </div>
       <div className="right">
         <h2>Contact.</h2>
-        <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
+        <form onSubmit={sendEmail}>
+          <input type="text" placeholder="Email" name="from_name" />
+          <textarea name="message" placeholder="Message"></textarea>
           <button type="submit">Send</button>
           {message && <span>Thanks, I'll reply ASAP</span>}
         </form>
