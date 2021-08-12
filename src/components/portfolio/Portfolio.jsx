@@ -4,6 +4,8 @@ import "./portfolio.scss";
 import { webAppPortfolio } from "../../data";
 import { inProgressPortfolio } from "../../data";
 import { useEffect } from "react";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LanguageIcon from "@material-ui/icons/Language";
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("webapp");
@@ -43,15 +45,35 @@ export default function Portfolio() {
             active={selected === item.id}
             setSelected={setSelected}
             id={item.id}
-            key={item.id} 
+            key={item.id}
           />
         ))}
       </ul>
       <div className="container">
         {data.map((d) => (
-          <div className="item" key={d.id} >
+          <div className="item" key={d.id}>
             <img src={d.img} alt="" />
             <h3>{d.title}</h3>
+            <span className="links">
+              <a
+                href={d.git}
+                target="_blank"
+                alt="github"
+                rel="noreferrer"
+              >
+                <GitHubIcon color="error" fontSize="large" />
+              </a>
+              <span>
+                <a
+                  href={d.link}
+                  target="_blank"
+                  alt="www"
+                  rel="noreferrer"
+                >
+                  <LanguageIcon fontSize="large" />
+                </a>
+              </span>
+            </span>
           </div>
         ))}
       </div>
