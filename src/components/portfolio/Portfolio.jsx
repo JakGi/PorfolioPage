@@ -1,21 +1,39 @@
-import "./portfolio.scss"
-import { init } from "ityped";
-import { useEffect, useRef } from "react";
+import { useState } from "react";
+import PortfolioList from "../portfolioList/PortfolioList";
+import "./portfolio.scss";
 
 export default function Portfolio() {
-    const textRef = useRef();
+  const [selected, setSelected] = useState("webapp");
 
-    useEffect(() => {
-      init(textRef.current, {
-        showCursor: true,
-        backDelay: 1000,
-        strings: ["In Progess!"],
-      });
-    }, []);
-    return (
-        <div className="portfolio" id="portfolio">
-            <h1><span ref={textRef}></span></h1>
-           
+  const list = [
+    {
+      id: "webapp",
+      title: "Web App",
+    },
+    {
+      id: "inprogres",
+      title: "In progess",
+    },
+  ];
+  return (
+    <div className="portfolio" id="portfolio">
+      <h1>Porfolio.</h1>
+      <ul>
+        {list.map((item) => (
+          <PortfolioList
+            title={item.title}
+            active={selected === item.id}
+            setSelected={setSelected}
+            id={item.id}
+          />
+        ))}
+      </ul>
+      <div className="container">
+        <div className="item">
+          <img src="/PorfolioPage/assets/sunsiadek.png" alt="comunityapp" />
+          <h3>Community App</h3>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
